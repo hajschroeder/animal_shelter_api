@@ -54,12 +54,12 @@ ___
 | :--- |:---| :---|
 |GET | `localhost:3000/animals`| Returns a list of all animals in the database|
 |GET | `localhost:3000/animals/18`| Returns all information related to animal ID=18|
-|POST|`http://localhost:3000/animals?name=Captain Smellyshoes&breed=Piano Tuner&age=49`|Adds animal to database. Name:Captain Smellyshoes, Breed: Piano Tuner, Age: 49. If POST is succesfull, returns database object for newly created animal.|
+|POST|`http://localhost:3000/animals?species=cat&name=Captain Smellyshoes&breed=Piano Tuner&age=49`|Adds animal to database. Name:Captain Smellyshoes, Breed: Piano Tuner, Age: 49. If POST is succesfull, returns database object for newly created animal.|
 |PUT/PATCH|`http://localhost:3000/animals/23?name=MissusDreamyEyes`|Updates the name for an animal with ID=23. If PUT/PATCH is succesfull, returns database object for newly updated animal.|
-|DELETE|`http://localhost:3000/quotes/38`|Deletes the quote with ID=38 from database|
+|DELETE|`http://localhost:3000/quotes/38`|Deletes the animal with ID=38 from database|
 
 ## Known Bugs
-This is presently a work in progress, and not all endpoints have been fully tested. This will change in the coming days. Additionally, the developer attempted to automate the process of reseeding the database. A rake task was written that will run `db:drop`, `db:create`, `db:migrate`, `db:test:prepare`, and `db:seed` all with the single command `rake db:reseed`. When these commands are run individually, the API works exactly as it is intended. When run using this automated task, the rest for the size of the database fails (RSpec tests the length of the seed file plus the length of the FactoryBot test file), and none of the seeded data will show in Postman. While this implementation is not required for the project, the developer sees the great value of being able to automate small tasks to save time. As such, this bug will receive further attention in the future with the intent of better learning time-saving coding practices. 
+This is presently a work in progress, and not all endpoints have been fully tested. This will change in the coming days. Additionally, the developer attempted to automate the process of reseeding the database. A rake task was written that will run `db:drop`, `db:create`, `db:migrate`, `db:test:prepare`, and `db:seed` all with the single command `rake db:reseed`. When these commands are run individually, the API works exactly as it is intended. When run using this automated task, the test for the size of the database fails (RSpec tests the length of the seed file plus the length of the FactoryBot test file), and none of the seeded data will show in Postman. While this implementation is not required for the project, the developer sees the great value of being able to automate small tasks to save time. As such, this bug will receive further attention in the future with the intent of better learning time-saving coding practices. 
 
 
 
