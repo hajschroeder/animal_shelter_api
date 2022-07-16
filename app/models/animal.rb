@@ -1,4 +1,7 @@
 class Animal < ApplicationRecord
 
-  validates :species, :name, :breed, :age, presence: :true
+  validates :species, presence: true
+  validates :name, presence: true
+  validates :breed, presence: true
+  validates :age, presence: true
 end
