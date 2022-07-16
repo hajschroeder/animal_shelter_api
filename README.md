@@ -17,6 +17,7 @@
 * RSpec version 3.11.0
 * PostgreSQL
 * Postman
+* will_paginate
 
 ## Resources Used
 1. [Ruby Documentation](https://ruby-doc.org/) 
@@ -29,7 +30,7 @@
 
 ## Description
 
-This is an independant project for the coding school Epicodus. It is an API for a hypothetical animal shelter.
+This is an independant project for the coding school Epicodus. It is an API for a hypothetical animal shelter. It includes pagination so that when called the API does not return the entire inventory of animals in the shelter. This was achieved by using the `will_paginate` gem, and the index within the application_controller.rb file was adjusted to only allow five results per page. 
 
 ## Setup/Installation
 _Note, this will require your local device to have Ruby installed as well as PostgreSQL. Postman will be required for submitting requests to the API_
@@ -59,7 +60,7 @@ ___
 |DELETE|`http://localhost:3000/quotes/38`|Deletes the animal with ID=38 from database|
 
 ## Known Bugs
-This is presently a work in progress, and not all endpoints have been fully tested. This will change in the coming days. Additionally, the developer attempted to automate the process of reseeding the database. A rake task was written that will run `db:drop`, `db:create`, `db:migrate`, `db:test:prepare`, and `db:seed` all with the single command `rake db:reseed`. When these commands are run individually, the API works exactly as it is intended. When run using this automated task, the test for the size of the database fails (RSpec tests the length of the seed file plus the length of the FactoryBot test file), and none of the seeded data will show in Postman. While this implementation is not required for the project, the developer sees the great value of being able to automate small tasks to save time. As such, this bug will receive further attention in the future with the intent of better learning time-saving coding practices. 
+While there are no current bugs with the project as assigned, there is presently an issue with a personal attempt at automation made by the developer. A rake task was written that will run `db:drop`, `db:create`, `db:migrate`, `db:test:prepare`, and `db:seed` all with the single command `rake db:reseed`. When these commands are run individually, the API works exactly as it is intended. When run using this automated task, the test for the size of the database fails (RSpec tests the length of the seed file plus the length of the FactoryBot test file), and none of the seeded data will show in Postman. While this implementation is not required for the project, the developer sees the great value of being able to automate small tasks to save time. As such, this bug will receive further attention in the future with the intent of better learning time-saving coding practices. 
 
 
 
